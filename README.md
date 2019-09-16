@@ -15,6 +15,10 @@ Installation
 - hexchat
 - meson
 
+### Conflicts
+
+You must deactivate the original FiSHLiM version of the HexChat core before using this version
+
 #### User install
 
 ```sh
