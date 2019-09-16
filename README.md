@@ -30,6 +30,10 @@ ninja -C builddir
 sudo ninja -C builddir install
 ```
 
+### AUR
+
+We offer AUR repo: https://aur.archlinux.org/packages/hexchat-fishlim-reloaded-git/
+
 Features
 --------
 
