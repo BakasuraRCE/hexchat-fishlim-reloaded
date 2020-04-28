@@ -171,7 +171,8 @@ char *decrypt_raw_message(const char *message, const char *key) {
 
             /* Encrypted part */
             start += strlen(prefixes[index_prefix]);
-            end = g_strstr_len(start, strlen(message), " ");
+            ((end = g_strstr_len(start, strlen(message), "\1")) ||
+	    (end = g_strstr_len(start, strlen(message), " ")));
             if (end) {
                 length = end - start;
                 right = end;
