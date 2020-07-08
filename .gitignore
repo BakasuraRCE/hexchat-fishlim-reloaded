@@ -56,3 +56,4 @@ builddir/
 
 # IDEA
 .idea/
+cmake-build-debug/
