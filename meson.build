@@ -36,6 +36,9 @@ config_h.set('HAVE_DH_SET0_KEY',
   cc.has_function('DH_set0_key', dependencies: libssl_dep)
 )
 
+# Run tests
+subdir('tests')
+
 configure_file(output: 'config.h', configuration: config_h)
 config_h_include = include_directories('.')
 
