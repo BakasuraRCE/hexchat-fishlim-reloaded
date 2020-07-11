@@ -171,7 +171,8 @@ char *decrypt_raw_message(const char *message, const char *key) {
 
             /* Encrypted part */
             start += strlen(prefixes[index_prefix]);
-            end = g_strstr_len(start, strlen(message), " ");
+            ((end = g_strstr_len(start, strlen(message), "\1")) ||
+	    (end = g_strstr_len(start, strlen(message), " ")));
             if (end) {
                 length = end - start;
                 right = end;
@@ -608,7 +609,7 @@ static int handle_crypt_me(char *word[], char *word_eol[], void *userdata) {
 	if (!buf)
         return HEXCHAT_EAT_NONE;
 
-	hexchat_commandf(ph, "PRIVMSG %s :\001ACTION +OK %s \001", channel, buf);
+	hexchat_commandf(ph, "PRIVMSG %s :\001ACTION +OK %s\001", channel, buf);
 	hexchat_emit_print(ph, "Your Action", hexchat_get_info(ph, "nick"),
                        word_eol[2], NULL);
 
