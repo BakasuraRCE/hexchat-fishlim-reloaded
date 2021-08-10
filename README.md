@@ -23,6 +23,7 @@ You must deactivate the original FiSHLiM version of the HexChat core before usin
 
 ```sh
 meson builddir -Dlocal_install=true
+ninja -C builddir test
 ninja -C builddir install
 ```
 
@@ -31,6 +32,7 @@ ninja -C builddir install
 ```sh
 meson builddir
 ninja -C builddir
+ninja -C builddir test
 sudo ninja -C builddir install
 ```
 

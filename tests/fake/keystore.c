@@ -22,18 +22,26 @@
 
 */
 
-#ifndef FISH_H
-#define FISH_H
-
-#include <stddef.h>
-
-#include <glib.h>
-
-char *fish_encrypt(const char *key, size_t keylen, const char *message);
-char *fish_decrypt(const char *key, size_t keylen, const char *data);
-char *fish_encrypt_for_nick(const char *nick, const char *data);
-char *fish_decrypt_from_nick(const char *nick, const char *data);
-
-#endif
+#include "../../fish.h"
 
 
+/**
+ * Extracts a key from the key store file.
+ */
+char *keystore_get_key(const char *nick, enum fish_mode *mode) {
+    return NULL;
+}
+
+/**
+ * Sets a key in the key store file.
+ */
+gboolean keystore_store_key(const char *nick, const char *key, enum fish_mode mode) {
+    return NULL;
+}
+
+/**
+ * Deletes a nick from the key store.
+ */
+gboolean keystore_delete_nick(const char *nick) {
+    return NULL;
+}
