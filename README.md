@@ -1,3 +1,7 @@
+# Archived project
+
+This project was already merged into the Hexchat code, the main objective of it to exist, please go to the official repository to get support
+
 HexChat FiSHLiM Reloaded
 ========================
 
